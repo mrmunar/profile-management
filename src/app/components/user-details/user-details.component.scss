@@ -1,0 +1,8 @@
+$border-color: silver;
+
+.img-profile {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 35px;
+    border: 5px solid $border-color;
+}
