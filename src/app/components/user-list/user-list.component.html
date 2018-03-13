@@ -1,7 +1,11 @@
-<ul class="list-group">
-    <li class="list-group-item">User 1</li>
-    <li class="list-group-item">User 2</li>
-    <li class="list-group-item">User 3</li>
-    <li class="list-group-item">User 4</li>
-    <li class="list-group-item">User 5</li>
+<ul class="list-group" *ngIf="data">
+    <li class="list-group-item userListItem"  *ngFor="let item of data | orderBy: order : reverse"
+      (click)="getUser(item.id)" [class.selected]="item.id === selectedUserId">
+
+      <div class="d-flex align-items-center">
+        <div><img src="{{ item.details.picture.thumbnail }}" /></div>
+        <div class="pl-2">{{ item.details.name.first }} {{ item.details.name.last }}</div>
+      </div>
+
+    </li>
   </ul>

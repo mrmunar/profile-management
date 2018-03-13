@@ -1,27 +1,49 @@
-<div class="row d-flex justify-content-center">
-    <div style="width: 100px; height: 100px; background-color: black;" class="text-center img-profile">
-
-    </div>
-    <table class="table table-striped">
+<div class="row d-flex justify-content-center" *ngIf="data">
+  <div>
+    <img class="text-center img-profile" src="{{ data.picture.large }}" />
+  </div>
+  <table class="table table-striped">
+    <tbody>
       <tr>
-        <td class="w-25">Field</td>
-        <td class="w-75">Value</td>
+        <td class="field-name">Status</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-between" *ngIf="data.status === 'active'">
+            <div class="text-success font-weight-bold">Active</div>
+            <button class="btn btn-danger ml-2" (click)="changeStatus(id, 'deleted')">Delete
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+          <div class="d-flex align-items-center justify-content-between" *ngIf="data.status === 'deleted'">
+            <div class="text-danger font-weight-bold">Deleted</div>
+            <button class="btn btn-success ml-2 align-right" (click)="changeStatus(id, 'active')">Activate
+              <i class="far fa-check-square"></i>
+            </button>
+          </div>
+        </td>
       </tr>
       <tr>
-        <td>Field</td>
-        <td>Value</td>
+        <td class="w-25 field-name">Name</td>
+        <td class="w-75">{{ data.name.first }} {{ data.name.last }}</td>
       </tr>
       <tr>
-        <td>Field</td>
-        <td>Value</td>
+        <td class="field-name">Username</td>
+        <td>{{ data.username }}</td>
       </tr>
       <tr>
-        <td>Field</td>
-        <td>Value</td>
-      </tr>
-      <tr>
-        <td>Field</td>
-        <td>Value</td>
-      </tr>
-    </table>
+        <tr>
+          <td class="field-name">Email</td>
+          <td>{{ data.email }}</td>
+        </tr>
+        <tr>
+          <td class="field-name">Address</td>
+          <td>{{ data.location.street }} {{ data.location.city }} {{ data.location.state }} {{ data.location.postcode }}</td>
+        </tr>
+        <tr>
+          <td class="field-name">Date of Birth</td>
+          <td>{{ data.dob | date:'longDate' }}</td>
+        </tr>
+    </tbody>
+  </table>
 </div>
+
+<div class="alert alert-warning text-center" *ngIf="!data">Please add/choose a user.</div>

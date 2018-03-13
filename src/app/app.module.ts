@@ -7,6 +7,9 @@ import { AddUserButtonComponent } from './components/add-user-button/add-user-bu
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { FilterToogleComponent } from './components/filter-toogle/filter-toogle.component';
+import { ProfileManagementService } from './services/profile-management.service';
+import { HttpClientModule } from '@angular/common/http';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -18,9 +21,11 @@ import { FilterToogleComponent } from './components/filter-toogle/filter-toogle.
     FilterToogleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    OrderModule
   ],
-  providers: [],
+  providers: [ProfileManagementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

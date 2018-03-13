@@ -1,5 +1,5 @@
 <div class="btn-group mb-2 d-flex" role="group" aria-label="Filters">
-    <button type="button" class="btn btn-secondary w-100">All</button>
-    <button type="button" class="btn btn-secondary w-100">Active</button>
-    <button type="button" class="btn btn-secondary w-100">Deleted</button>
+    <button type="button" [class.selectedAll]="selectedBtn === 'all'" (click)="filterList('all')" class="btn btn-default w-100">All</button>
+    <button type="button" [class.selectedActive]="selectedBtn === 'active'" (click)="filterList('active')" class="btn btn-default w-100">Active</button>
+    <button type="button" [class.selectedDeleted]="selectedBtn === 'deleted'" (click)="filterList('deleted')" class="btn btn-default w-100">Deleted</button>
 </div>

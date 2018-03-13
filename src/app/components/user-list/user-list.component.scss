@@ -1,0 +1,11 @@
+.userListItem {
+    cursor: pointer;
+}
+
+.userListItem:hover {
+    background-color:lightgrey;
+}
+
+.selected {
+    background-color: silver;
+}

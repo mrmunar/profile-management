@@ -5,3 +5,15 @@
 .filters .btn {
     flex: 1;
 }
+
+.btn:hover, .selectedAll, .selectedAll:focus {
+    background-color: #007bff;
+}
+
+.selectedActive:focus {
+    background-color: #28a745;
+}
+
+.selectedDeleted:focus {
+    background-color: #dc3545;
+}
