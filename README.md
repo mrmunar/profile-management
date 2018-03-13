@@ -28,6 +28,24 @@ npm install
 ng serve
 ```
 
+## Production Assets
+[https://github.com/mrmunar/profile-management/tree/production/dist](https://github.com/mrmunar/profile-management/tree/production/dist)
+
+## SASS Configured
+
+##### ./*angular-cli.json*
+
+```
+"defaults": {
+    "styleExt": "scss",
+    "component": {
+    }
+}
+```
+
+## Module Bundler
+
+Built-in Angular Webpack
 
 ## Usage
 
@@ -79,7 +97,7 @@ State is persisted in the browser's `localStorage`
 
 ##### */src/app/services/profile-management.service.ts*
 
-##### [ GET ]
+##### [ SET ]
 
 ```Typescript
 setToLocalStorage(data: Object): void {
@@ -87,7 +105,7 @@ setToLocalStorage(data: Object): void {
 }
 ```
 
-##### [ SET ]
+##### [ GET ]
 
 ```Typescript
 getUsersFromState(): Promise<Object> {
