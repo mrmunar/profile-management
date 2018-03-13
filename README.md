@@ -2,19 +2,30 @@
 
 > Built on Angular 5+
 
-## Reuirements
+## Requirements
 > NodeJS and NPM ([download](https://nodejs.org/en/))
+
+> Git
+
+## Demo
+
 
 ## Clone
 
 ```
-git clone
+git clone https://github.com/mrmunar/profile-management profile-management
 ```
 
 ## Install npm dependencies
 
 ```
+cd profile-management
 npm install
+```
+
+## Run the Development Server
+```
+ng serve
 ```
 
 
