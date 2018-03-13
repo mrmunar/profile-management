@@ -1,3 +1,28 @@
+.list-group {
+    max-height: 420px;
+    overflow: scroll;
+}
+
+.list-group::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+.list-group::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+.list-group::-webkit-scrollbar-thumb
+{
+	background-color: #007bff;
+	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+}
+
 .userListItem {
     cursor: pointer;
 }
@@ -7,5 +32,15 @@
 }
 
 .selected {
-    background-color: silver;
+    background-color: silver !important;
+}
+
+.active {
+    color: #28a745;
+    font-size: 1.4em;
+}
+
+.deleted {
+    color: #dc3545;
+    font-size: 1.4em;
 }

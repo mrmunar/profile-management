@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileManagementService } from '../../services/profile-management.service';
 
+/**
+ * User details page in main content page
+ */
+
 @Component({
   selector: 'app-user-details',
   templateUrl: './user-details.component.html',
@@ -15,14 +19,21 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.service.currentUser.subscribe(response => {
-      if(response) {
+      if (response) {
         this.id = response[0]['id'];
         this.data = response[0]['details'];
       }
+    },
+    error => {
+      throw new Error('Error: ' + error.message);
     });
+
     this.service.currentFilter.subscribe(response => {
       let filter = response;
       this.currentFilter = filter ? filter : 'all';
+    },
+    error => {
+      throw new Error('Error: ' + error.message);
     });
   }
 

@@ -3,6 +3,10 @@ import { ProfileManagementService } from '../../services/profile-management.serv
 import { User } from '../../classes/user';
 import { CapitalizePipe } from '../../pipes/capitalize.pipe';
 
+/**
+ * Add button for generating random user via api
+ */
+
 @Component({
   selector: 'app-add-user-button',
   templateUrl: './add-user-button.component.html',
@@ -12,11 +16,10 @@ import { CapitalizePipe } from '../../pipes/capitalize.pipe';
 export class AddUserButtonComponent implements OnInit {
   private ucfirst;
 
-  constructor(private service: ProfileManagementService, private capitalize: CapitalizePipe) { 
-    this.ucfirst = this.capitalize.transform;
-  }
+  constructor(private service: ProfileManagementService, private capitalize: CapitalizePipe) { }
 
   ngOnInit() {
+    this.ucfirst = this.capitalize.transform;
   }
 
   addUser(btnElement) {
@@ -53,6 +56,9 @@ export class AddUserButtonComponent implements OnInit {
       this.service.addUserToState(_User);
       btnElement.textContent = 'Add User';
       btnElement.disabled = false;
+    },
+    error => {
+      throw new Error('Error: ' + error.message);
     });
   }
 

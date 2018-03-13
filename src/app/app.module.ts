@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { AddUserButtonComponent } from './components/add-user-button/add-user-button.component';
 import { UserListComponent } from './components/user-list/user-list.component';
@@ -10,6 +9,7 @@ import { FilterToogleComponent } from './components/filter-toogle/filter-toogle.
 import { ProfileManagementService } from './services/profile-management.service';
 import { HttpClientModule } from '@angular/common/http';
 import { OrderModule } from 'ngx-order-pipe';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { OrderModule } from 'ngx-order-pipe';
     AddUserButtonComponent,
     UserListComponent,
     UserDetailsComponent,
-    FilterToogleComponent
+    FilterToogleComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
