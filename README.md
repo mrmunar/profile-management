@@ -10,7 +10,7 @@
 ## Demo
 [https://nameless-wave-43850.herokuapp.com/](https://nameless-wave-43850.herokuapp.com/)
 
-## Clone
+## Clone the Git Repository
 
 ```
 git clone https://github.com/mrmunar/profile-management profile-management
@@ -25,8 +25,15 @@ npm install
 
 ## Run the Development Server
 ```
-ng serve
+ng serve --open
 ```
+*Will open a default browser automatically*
+
+## Build for Production
+```
+ng build --prod --base-href=http://yourwebsite.com
+```
+Prodution files will be located at **/dist**
 
 ## Production Assets
 [https://github.com/mrmunar/profile-management/tree/production/dist](https://github.com/mrmunar/profile-management/tree/production/dist)
@@ -46,6 +53,26 @@ ng serve
 ## Module Bundler
 
 Built-in Angular Webpack
+
+##### *Styles bundle*
+
+```HTML
+<link href="styles.24773293fc104198fd15.bundle.css" rel="stylesheet"/>
+```
+
+##### *Javascript bundles*
+
+```HTML
+<script type="text/javascript" src="inline.0a23fd69c142623fdbca.bundle.js">
+```
+
+```HTML
+<script type="text/javascript" src="polyfills.abdf53ca655716e505e0.bundle.js">
+```
+
+```HTML
+<script type="text/javascript" src="main.dd037862a2fc4cf974b8.bundle.js">
+```
 
 ## Usage
 
