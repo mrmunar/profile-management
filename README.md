@@ -81,6 +81,20 @@ Built-in Angular Webpack
 * In the user details page, you can activate or delete a user.
 * You can toggle between active and deleted users using the filter buttons located on the upper portion of the page.
 
+## Screenshots
+
+<p align="center">
+  <img width="500" src="https://raw.githubusercontent.com/mrmunar/project-resources/master/profile-management/screenshots/sample-screenshot1.png">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mrmunar/project-resources/master/profile-management/screenshots/sample-screenshot2.png">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mrmunar/project-resources/master/profile-management/screenshots/sample-screenshot3.png">
+</p>
+
 ## The Random User API
 The API is consumed using the built-in Angular module - `HttpClientModule`. The endpoint URL is saved in the environments config file.
 
